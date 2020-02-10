@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -28,12 +29,11 @@ public class Character : MonoBehaviour
     public float runSpeed = 0f;
     public float distanceFromEnemy;
     Vector3 originalPosition;
-    Quaternion OriginalRotation;
+    Quaternion originalRotation, enemyLook;
 
     public Animator animator;
     public Transform target;
-
-    public Damageble enemyKilled;
+    public Damageble enemyAimed;
    
     
     // Start is called before the first frame update
@@ -41,16 +41,16 @@ public class Character : MonoBehaviour
     {
        
         originalPosition = transform.position;
-        OriginalRotation = transform.rotation;
+        originalRotation = transform.rotation;
         animator = GetComponentInChildren<Animator>();
     }
-
+    
     [ContextMenu("Attack")]
     public void AttackEnemy()
     {
-       enemyKilled = target.gameObject.GetComponent<Damageble>();
+        enemyAimed = target.gameObject.GetComponent<Damageble>();
 
-        if (enemyKilled.isDead||target==null|| this.state == State.Dead)
+        if (enemyAimed.isDead||target==null|| state == State.Dead)
         {
             Debug.Log("Deadmen can't attack");
             return;
@@ -61,6 +61,7 @@ public class Character : MonoBehaviour
                 state = State.BeginShoot;
                
                 break;
+            
             case Weapon.Bat:
             case Weapon.Fists:
                 state = State.RunningToEnemy;
@@ -71,7 +72,6 @@ public class Character : MonoBehaviour
     }
     public void SetState(State state)
     {
-       
         this.state = state;
     }
 
@@ -80,53 +80,59 @@ public class Character : MonoBehaviour
     {
         switch (state)
        
-        {
+        {  //поменять поворот 
             case State.Idle:
-                transform.rotation = OriginalRotation;
+                
+                transform.rotation = originalRotation;
                 animator.SetFloat("speed", 0f);
+                
                 break;
 
             case State.RunningToEnemy:
+               
                 animator.SetFloat("speed", runSpeed);
+                
                 if ( RunTowards(target.position, distanceFromEnemy))
                     state = State.BeginAttack;
+                    originalRotation = enemyLook;
                 break;
 
             case State.RunningFromEnemy:
+             
                 animator.SetFloat("speed", runSpeed);
                 if (RunTowards(originalPosition, 0f))
                     state = State.Idle;
                 break;
-
+            
+            // проверяем что в руках дубинка или пусто. или лучше добавить новое ссостояние?
             case State.BeginAttack:
+               
                 animator.SetFloat("speed", 0f);
-                animator.SetTrigger("attack");
+                animator.SetTrigger(weapon == Weapon.Bat ? "attack" : "fistAttack");
                 state = State.Attack;
+                
                 break;
 
             case State.Attack:
-                animator.SetFloat("speed", 0f);
-
-                enemyKilled.GetDamage();
+            
                 break;
-
+            
+                //поворот к цели при стрельбе
             case State.BeginShoot:
-                animator.SetFloat("speed", 0f);
+                
+                transform.rotation = originalRotation= Quaternion.LookRotation(target.position);
                 animator.SetTrigger("shoot");
                 state = State.Shoot;
 
-                enemyKilled.GetDamage();
                 break;
         }
-       
-          
     }
-
+     // enemyLook  - запоминаем поворот в сторону атакуемого противника
     bool RunTowards(Vector3 targetPosition, float distanceFromTarget)
     {
         Vector3 distance =  targetPosition- transform.position;
         Vector3 direction = distance.normalized;
-        transform.rotation = Quaternion.LookRotation(direction);
+        transform.rotation = enemyLook = Quaternion.LookRotation(direction);
 
         targetPosition -=  direction*distanceFromTarget;
         distance = targetPosition - transform.position;

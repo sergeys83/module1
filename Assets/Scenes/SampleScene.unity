@@ -848,6 +848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!1 &302921434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2269517667082013923, guid: ec4b6a0b6924a2e419f93c7a483c42f1,
@@ -951,6 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!1 &373214051
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,7 +2346,7 @@ PrefabInstance:
     - target: {fileID: 8465694929531148977, guid: 2d3bdd141f8b8244e8db7b0ee8540ba3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.733
+      value: 0.712
       objectReference: {fileID: 0}
     - target: {fileID: 8465694929531148977, guid: 2d3bdd141f8b8244e8db7b0ee8540ba3,
         type: 3}
@@ -2422,6 +2424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!1001 &1330082779
 PrefabInstance:
   m_ObjectHideFlags: 0
