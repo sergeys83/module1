@@ -23,6 +23,7 @@ public class Character : MonoBehaviour
         Bat,
         Fists
     }
+    
     public State state = State.Idle;
     public Weapon weapon;
 
@@ -32,10 +33,10 @@ public class Character : MonoBehaviour
     Quaternion originalRotation, enemyLook;
 
     public Animator animator;
-    public Transform target;
+    public Character targetCharacter;
     public Damageble enemyAimed;
-   
-    
+    private Health _health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,13 +45,36 @@ public class Character : MonoBehaviour
         originalRotation = transform.rotation;
         animator = GetComponentInChildren<Animator>();
     }
-    
+    public bool isDead()
+    {
+        return state == State.Dead;
+    }
+    public bool isIdle()
+    {
+        return state == State.Idle;
+    }
     [ContextMenu("Attack")]
+    public void GetDamage()
+    {
+       
+        _health = targetCharacter.GetComponent<Health>();
+
+        _health.ApplyDamage(2f);
+
+        if (_health.current <= 0)
+        {
+            Debug.Log($"{targetCharacter.gameObject.name} is killed");
+           // isDead = true;
+            targetCharacter.SetState(State.Dead);
+            animator.SetBool("health", isDead());
+        }
+
+    }
     public void AttackEnemy()
     {
-        enemyAimed = target.gameObject.GetComponent<Damageble>();
+        enemyAimed = targetCharacter.gameObject.GetComponent<Damageble>();
 
-        if (enemyAimed.isDead||target==null|| state == State.Dead)
+        if (enemyAimed.isDead|| targetCharacter == null|| isDead())
         {
             Debug.Log("Deadmen can't attack");
             return;
@@ -92,7 +116,7 @@ public class Character : MonoBehaviour
                
                 animator.SetFloat("speed", runSpeed);
                 
-                if ( RunTowards(target.position, distanceFromEnemy))
+                if ( RunTowards(targetCharacter.transform.position, distanceFromEnemy))
                     state = State.BeginAttack;
                     originalRotation = enemyLook;
                 break;
@@ -120,7 +144,7 @@ public class Character : MonoBehaviour
                 //поворот к цели при стрельбе
             case State.BeginShoot:
                 
-                transform.rotation = originalRotation= Quaternion.LookRotation(target.position);
+                transform.rotation = originalRotation= Quaternion.LookRotation(targetCharacter.transform.position);
                 animator.SetTrigger("shoot");
                 state = State.Shoot;
 
