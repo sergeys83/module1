@@ -9,26 +9,49 @@ using UnityEngine.EventSystems;
 
 public class LevelMenu : Menu
 {
+    public LevelMenu Instance;
     public List<SceneInit> sceneLoader = new List<SceneInit>();
     public MainMenu mainMenu;
-    public string sceneName;
-      
+    public string curScene, scene;
+
     // Start is called before the first frame update
+    private void Awake()
+    {
+        foreach (var item in sceneLoader)
+        {
+            Debug.Log(item.scene);
+            item.btn.onClick.AddListener(()=>LoadLevel(item.scene));
+        }
+    }
     void Start()
     {
-        for (int i = 0; i < sceneLoader.Count; i++)
-        {
-            Debug.Log($"{sceneLoader[i].scene} ={sceneLoader.Count}  ");
-            sceneLoader[i].init();
-        }
-     
+            
         BackButtonHandler(Hide);
     }
 
-    private void LoadLevel(string scene)
+    public void LoadLevel(string scene)
     {
-        SceneManager.LoadScene(scene);
+        AsyncOperation task = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+       
+        task.allowSceneActivation=true;
+        StartCoroutine(SceneLoader(task,scene));
+       
     }
+
+    IEnumerator SceneLoader(AsyncOperation response, string sceneName)
+    {
+        while (!response.isDone)
+        {
+            Debug.Log(response.progress);
+            yield return null;
+        }
+        Scene curScene = SceneManager.GetSceneByName(sceneName);
+        Debug.Log(curScene.name);
+        SceneManager.SetActiveScene(curScene);
+        Debug.Log("SCENE LOADED ^^" + sceneName);
+        GameObject.Find("Menu").SetActive(false);
+    }
+
     private void ShowLevelMenu()
     {
         base.Hide();
@@ -46,11 +69,11 @@ public class LevelMenu : Menu
         mainMenu.Show();
 
     }
-    public override void Show()
+  /*  public override void Show()
     {
         base.Show();
     }
-
+*/
     // Update is called once per frame
     void Update()
     {

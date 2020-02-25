@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,10 +11,15 @@ public class SceneInit
 {
    public string scene;
    public Button btn;
-
+   
    public void init()
     {
-        btn.onClick.AddListener(() => SceneManager.LoadScene(scene));
+     //   btn.onClick.AddListener(Load);
+              
+    }
+    private void Load()
+    {
+       
     }
 }
 

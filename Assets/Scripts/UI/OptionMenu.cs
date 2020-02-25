@@ -42,10 +42,10 @@ public class OptionMenu : Menu
 
     }
 
-    public override void Show()
+ /*   public override void Show()
     {
         base.Show();
     }
-
+*/
       
 }

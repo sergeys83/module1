@@ -152,7 +152,7 @@ public class Character : MonoBehaviour
         }
     }
      // enemyLook  - запоминаем поворот в сторону атакуемого противника
-    bool RunTowards(Vector3 targetPosition, float distanceFromTarget)
+   public bool RunTowards(Vector3 targetPosition, float distanceFromTarget)
     {
         Vector3 distance =  targetPosition- transform.position;
         Vector3 direction = distance.normalized;

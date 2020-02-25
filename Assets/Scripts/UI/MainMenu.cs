@@ -45,11 +45,11 @@ public class MainMenu : Menu
         Application.Quit();
 
     }
-    public override void Show()
+  /*  public override void Show()
     {
         base.Show();
     }
-
+    */
     // Update is called once per frame
     void Update()
     {

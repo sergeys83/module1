@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -10,6 +10,7 @@ public class PauseMenu : Menu
     private Scene currentScene;
     public string mainmenu;
     public UIBattle uiBattle;
+    public Action onMenuActivate;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,9 @@ public class PauseMenu : Menu
     private void Restart()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(currentScene.name);
+        currentScene = SceneManager.GetActiveScene();
+        SceneManager.UnloadSceneAsync(currentScene.buildIndex);
+        SceneManager.LoadScene(currentScene.name,LoadSceneMode.Additive);
     }
 
     public void LoadMainMenu()
@@ -42,6 +45,8 @@ public class PauseMenu : Menu
     {
         Time.timeScale = 0;
         base.Show();
+        onMenuActivate.Invoke();
+        
     }
 
     // Update is called once per frame
