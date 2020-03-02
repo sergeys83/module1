@@ -11,14 +11,23 @@
             <e p="ReadMe.txt" t="Include" />
           </e>
         </e>
+        <e p="rotateShield.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CameraSearch.cs" t="Include" />
           <e p="Character.cs" t="Include" />
           <e p="CharacterAnimationEvents.cs" t="Include" />
           <e p="Damageble.cs" t="Include" />
+          <e p="Game" t="Include">
+            <e p="MoveController.cs" t="Include" />
+            <e p="TestNavMesh" t="Include">
+              <e p="Patrol.cs" t="Include" />
+            </e>
+          </e>
           <e p="GameManager.cs" t="Include" />
+          <e p="GamePad.cs" t="Include" />
           <e p="Health.cs" t="Include" />
           <e p="HealthBar.cs" t="Include" />
+          <e p="PlayerCamera.cs" t="Include" />
           <e p="TargetIndicator.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="IMenu.cs" t="Include" />

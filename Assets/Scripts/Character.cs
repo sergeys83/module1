@@ -30,7 +30,7 @@ public class Character : MonoBehaviour
     public float runSpeed = 0f;
     public float distanceFromEnemy;
     Vector3 originalPosition;
-    Quaternion originalRotation, enemyLook;
+   public Quaternion originalRotation, enemyLook;
 
     public Animator animator;
     public Character targetCharacter;

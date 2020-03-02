@@ -206,6 +206,8 @@ MonoBehaviour:
   weapon: 0
   runSpeed: 0.05
   distanceFromEnemy: 1.22
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  enemyLook: {x: 0, y: 0, z: 0, w: 0}
   animator: {fileID: 0}
   targetCharacter: {fileID: 0}
   enemyAimed: {fileID: 0}
@@ -441,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 1604254970948906563, guid: b48b1aeb539853b4d915e2a2d61016d9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1604254970948906563, guid: b48b1aeb539853b4d915e2a2d61016d9,
         type: 3}

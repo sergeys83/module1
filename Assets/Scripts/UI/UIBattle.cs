@@ -24,12 +24,14 @@ public class UIBattle : MonoBehaviour
     {
         btnAttack.interactable = false;
         btnNextTarget.interactable = false;
-      //  pause.Show();
+        btnPause.interactable = false;
+        //  pause.Show();
     }
     public void ActivateUI()
     {
         btnAttack.interactable = true;
         btnNextTarget.interactable = true;
+        btnPause.interactable = true;
     }
     // Update is called once per frame
     void Update()
