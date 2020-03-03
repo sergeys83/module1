@@ -9,7 +9,8 @@ public class Patrol : MonoBehaviour
     public Vector3 startPos;
     public Vector3 endPos;
     public Vector3 curPos;
-    
+
+    private Animator charAnimator;
     private NavMeshAgent agent;
     public Transform T1; //временно, для определения второй точки маршрута
    
@@ -19,7 +20,7 @@ public class Patrol : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
+        charAnimator = GetComponentInChildren<Animator>();
         
         startPos = transform.position;
         endPos =T1.position;
@@ -38,6 +39,8 @@ public class Patrol : MonoBehaviour
 
         // Set the agent to go to the currently selected destination.
         agent.destination = wayPoints[destPoint];
+        charAnimator.transform.LookAt(agent.destination);
+        Debug.Log($"speed= {agent.speed}");
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
@@ -51,6 +54,11 @@ public class Patrol : MonoBehaviour
         if (!agent.pathPending && agent.remainingDistance < .2f)
         {
             GotoNextPoint();
+            
+        }
+        if (agent.hasPath)
+        {
+            charAnimator.SetFloat("speed", 2f);
         }
        
     }
