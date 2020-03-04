@@ -33,28 +33,24 @@ public class Patrol : MonoBehaviour
 
     }
     void GotoNextPoint() {
-        // Returns if no points have been set up
+       
         if (wayPoints.Count == 0)
             return;
 
-        // Set the agent to go to the currently selected destination.
         agent.destination = wayPoints[destPoint];
         charAnimator.transform.LookAt(agent.destination);
         Debug.Log($"speed= {agent.speed}");
 
-        // Choose the next point in the array as the destination,
-        // cycling to the start if necessary.
         destPoint = (destPoint + 1) % wayPoints.Count;
     }
 
-    // Update is called once per frame
     void Update()
     {
         curPos = agent.transform.position;
         if (!agent.pathPending && agent.remainingDistance < .2f)
         {
             GotoNextPoint();
-            
+        
         }
         if (agent.hasPath)
         {

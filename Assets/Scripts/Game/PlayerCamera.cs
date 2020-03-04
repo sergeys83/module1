@@ -11,13 +11,13 @@ public class PlayerCamera : MonoBehaviour
     private Quaternion curRotation;
     public Transform player;
     public Vector3 curPlayerPos;
-
-    public Vector3 delta ;
-   /* {
-        get { return delta = transform.position - player.position;}
-        set { }
+    private Vector3 _delta;
+    public Vector3 delta 
+    {
+        get { return _delta ;}
+        set { _delta = transform.position - player.position; }
     }
-    */
+    
 
     public LayerMask lMask;
     
@@ -30,7 +30,7 @@ public class PlayerCamera : MonoBehaviour
         curPlayerPos = player.transform.position;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
        //transform.position = curPosition; // поворот камеры игрока.
 
@@ -49,11 +49,11 @@ public class PlayerCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+   /* void LateUpdate()
     {
 
       //  transform.LookAt(player);
-    }
+    }*/
 
     private void Moves()
     {

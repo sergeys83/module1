@@ -911,7 +911,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: -7.47, y: 0, z: -7.81}
-  speed: 0
+  curPos: {x: 0, y: 0, z: 0}
+  T1: {fileID: 0}
+  wayPoints: []
 --- !u!195 &578539539022969569
 NavMeshAgent:
   m_ObjectHideFlags: 0
