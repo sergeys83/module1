@@ -46,10 +46,10 @@ public class LevelMenu : Menu
             yield return null;
         }
         Scene curScene = SceneManager.GetSceneByName(sceneName);
-        Debug.Log(curScene.name);
         SceneManager.SetActiveScene(curScene);
-        Debug.Log("SCENE LOADED ^^" + sceneName);
+        Debug.Log("SCENE LOADED: " + sceneName);
         GameObject.Find("Menu").SetActive(false);
+      //  base.Hide();
     }
 
     private void ShowLevelMenu()

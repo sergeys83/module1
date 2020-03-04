@@ -14,8 +14,14 @@ public class Patrol : MonoBehaviour
     private NavMeshAgent agent;
     public Transform T1; //временно, для определения второй точки маршрута
    
+    //Поправить
+    //1 Останавливается 1 из НПС, обработка столкновений видимо.
+    //2 Поворот - не должен топтаться на месте
+    //3 Добавить в дебаг - режим показа радиуса поиска Игрока
+    //Спросить на уроке, как делают область видимости перед собой на угол в градусах
+    
     private int destPoint = 0;
-    public List<Vector3> wayPoints;
+    public List<Vector3> wayPoints;   //Задать пустыми объектами через трансформы наверное, брать из какого-то спсиска  и матчить с нпс
     // Start is called before the first frame update
     void Start()
     {

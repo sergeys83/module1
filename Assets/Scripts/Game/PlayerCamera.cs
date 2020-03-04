@@ -12,7 +12,7 @@ public class PlayerCamera : MonoBehaviour
     public Transform player;
     public Vector3 curPlayerPos;
     private Vector3 _delta;
-    public Vector3 delta 
+    public Vector3 Delta 
     {
         get { return _delta ;}
         set { _delta = transform.position - player.position; }
@@ -26,7 +26,7 @@ public class PlayerCamera : MonoBehaviour
     {
         curPosition = transform.position;
         curRotation = transform.rotation;
-        delta = transform.position - player.transform.position;
+        Delta = transform.position - player.transform.position;
         curPlayerPos = player.transform.position;
     }
 
@@ -34,7 +34,7 @@ public class PlayerCamera : MonoBehaviour
     {
        //transform.position = curPosition; // поворот камеры игрока.
 
-        Vector3 newCampos = player.transform.position+ delta;
+        Vector3 newCampos = player.transform.position+ Delta;
         transform.position = Vector3.Slerp(transform.position, newCampos, speed*Time.deltaTime);
         curPosition = transform.position;
          Quaternion curRotation = Quaternion.LookRotation(player.position- transform.position); 
