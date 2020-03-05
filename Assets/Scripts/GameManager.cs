@@ -69,11 +69,16 @@ public class GameManager : MonoBehaviour
    
     public void PlayerWon()
     {
+        
+        isWinner = true;
+        summary.SetResult(isWinner);
         Debug.Log("Playere won");
     }
 
     public void PlayerLost()
     {
+        isWinner = false;
+        summary.SetResult(isWinner);
         Debug.Log("Playere lost");
     }
 
@@ -93,15 +98,11 @@ public class GameManager : MonoBehaviour
     {
         if (FirstAliveChat(playerCharacters)==null)
         {
-            isWinner = false;
-            summary.SetResult(isWinner);
             PlayerLost();
             return true;
         }
         if (FirstAliveChat(enemyCharacters) == null)
         {
-            isWinner = true;
-            summary.SetResult(isWinner);
             PlayerWon();
             return true;
         }
@@ -136,7 +137,6 @@ public class GameManager : MonoBehaviour
                    yield return null;
                
             }
-
 
             foreach (var enemy in enemyCharacters)
             {

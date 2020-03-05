@@ -12,6 +12,7 @@
           </e>
         </e>
         <e p="rotateShield.cs" t="Include" />
+        <e p="SceneLoad.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CameraSearch.cs" t="Include" />
           <e p="Character.cs" t="Include" />
@@ -32,12 +33,12 @@
           <e p="UI" t="Include">
             <e p="IMenu.cs" t="Include" />
             <e p="LevelMenu.cs" t="Include" />
-            <e p="LoadManager.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
             <e p="Menu.cs" t="Include" />
             <e p="OptionMenu.cs" t="Include" />
             <e p="PauseMenu.cs" t="Include" />
             <e p="SceneInit.cs" t="Include" />
+            <e p="SoundMenu.cs" t="Include" />
             <e p="SummaryMenu.cs" t="Include" />
             <e p="UIBattle.cs" t="Include" />
           </e>

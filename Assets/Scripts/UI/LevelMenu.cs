@@ -13,6 +13,7 @@ public class LevelMenu : Menu
     public List<SceneInit> sceneLoader = new List<SceneInit>();
     public MainMenu mainMenu;
     public string curScene, scene;
+    public SceneLoad _SceneLoad;
 
     // Start is called before the first frame update
     private void Awake()
@@ -20,47 +21,16 @@ public class LevelMenu : Menu
         foreach (var item in sceneLoader)
         {
             Debug.Log(item.scene);
-            item.btn.onClick.AddListener(()=>LoadLevel(item.scene));
+            item.btn.onClick.AddListener(()=>
+            {Hide();
+                GameObject.Find("Menu").SetActive(false);
+                SceneLoad.sl.LoadLevel(item.scene);
+            });
         }
     }
     void Start()
     {
-            
         BackButtonHandler(Hide);
-    }
-
-    public void LoadLevel(string scene)
-    {
-        AsyncOperation task = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-       
-        task.allowSceneActivation=true;
-        StartCoroutine(SceneLoader(task,scene));
-       
-    }
-
-    IEnumerator SceneLoader(AsyncOperation response, string sceneName)
-    {
-        while (!response.isDone)
-        {
-            Debug.Log(response.progress);
-            yield return null;
-        }
-        Scene curScene = SceneManager.GetSceneByName(sceneName);
-        SceneManager.SetActiveScene(curScene);
-        Debug.Log("SCENE LOADED: " + sceneName);
-        GameObject.Find("Menu").SetActive(false);
-      //  base.Hide();
-    }
-
-    private void ShowLevelMenu()
-    {
-        base.Hide();
-
-    }
-
-    public void LoadMainMenu()
-    {
-        Hide();
     }
 
     public override void Hide()
@@ -69,11 +39,7 @@ public class LevelMenu : Menu
         mainMenu.Show();
 
     }
-  /*  public override void Show()
-    {
-        base.Show();
-    }
-*/
+  
     // Update is called once per frame
     void Update()
     {

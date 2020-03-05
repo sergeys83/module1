@@ -23,13 +23,27 @@ public class SummaryMenu : Menu
         BackButtonHandler(LoadMainMenu);
     }
 
-   
+    private void Restart()
+    {
+        Time.timeScale = 1;
+        
+        //СДЕЛАТЬ КОРУТИНУ СЦЕНЛОАДЕР В ГЛАВНОМ ММЕНЮ
+        
+        currentScene = SceneManager.GetActiveScene();
+        SceneManager.UnloadSceneAsync(currentScene.buildIndex);
+        SceneManager.LoadScene(currentScene.name,LoadSceneMode.Additive);
+    }
+
     public void LoadMainMenu()
     {
         Hide();
+        
+        currentScene = SceneManager.GetActiveScene();
+        SceneManager.UnloadSceneAsync(currentScene.buildIndex);
+        
         SceneManager.LoadScene(mainmenu);
     }
-
+ 
    public void SetResult(bool winner)
     {
         base.Show();

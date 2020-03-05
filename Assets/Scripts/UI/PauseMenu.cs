@@ -13,6 +13,8 @@ public class PauseMenu : Menu
     public Action onMenuActivate;
 
     // Start is called before the first frame update
+   
+
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
@@ -29,17 +31,14 @@ public class PauseMenu : Menu
         
         currentScene = SceneManager.GetActiveScene();
         SceneManager.UnloadSceneAsync(currentScene.buildIndex);
-        SceneManager.LoadScene(currentScene.name,LoadSceneMode.Additive);
+        SceneLoad.sl.LoadLevel(currentScene.name);
     }
 
     public void LoadMainMenu()
     {
         Hide();
-        
-        currentScene = SceneManager.GetActiveScene();
-        SceneManager.UnloadSceneAsync(currentScene.buildIndex);
-        
-        SceneManager.LoadScene(mainmenu);
+        SceneLoad.sl.UnLoadLevel(currentScene.name);
+       
     }
 
     public override void Hide()

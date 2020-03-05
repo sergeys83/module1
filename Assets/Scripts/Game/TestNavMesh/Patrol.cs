@@ -17,7 +17,7 @@ public class Patrol : MonoBehaviour
     //Поправить
     //1 Останавливается 1 из НПС, обработка столкновений видимо.
     //2 Поворот - не должен топтаться на месте
-    //3 Добавить в дебаг - режим показа радиуса поиска Игрока
+    //3 Добавить в едитор - режим показа радиуса поиска Игрока
     //Спросить на уроке, как делают область видимости перед собой на угол в градусах
     
     private int destPoint = 0;
@@ -45,8 +45,7 @@ public class Patrol : MonoBehaviour
 
         agent.destination = wayPoints[destPoint];
         charAnimator.transform.LookAt(agent.destination);
-        Debug.Log($"speed= {agent.speed}");
-
+       // Debug.Log($"speed= {agent.speed}");
         destPoint = (destPoint + 1) % wayPoints.Count;
     }
 

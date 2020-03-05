@@ -32,25 +32,16 @@ public class MainMenu : Menu
         optionMenu.Show();
 
     }
-
-    public void LoadMainMenu()
-    {
-        Hide();
-    }
-
+    
     public override void Hide()
     {
-       base.Hide();
+        base.Hide();
 
         Application.Quit();
 
     }
-  /*  public override void Show()
-    {
-        base.Show();
-    }
-    */
-    // Update is called once per frame
+
+ // Update is called once per frame
     void Update()
     {
         
