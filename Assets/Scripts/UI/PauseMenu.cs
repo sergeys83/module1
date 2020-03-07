@@ -26,11 +26,8 @@ public class PauseMenu : Menu
     private void Restart()
     {
         Time.timeScale = 1;
-        
-        //СДЕЛАТЬ КОРУТИНУ СЦЕНЛОАДЕР В ГЛАВНОМ ММЕНЮ
-        
+       
         currentScene = SceneManager.GetActiveScene();
-        SceneManager.UnloadSceneAsync(currentScene.buildIndex);
         SceneLoad.sl.LoadLevel(currentScene.name);
     }
 

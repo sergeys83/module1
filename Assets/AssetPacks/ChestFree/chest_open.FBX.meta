@@ -23,9 +23,9 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: chest_simple
-    second: {fileID: 2100000, guid: 64ae43b6b6e887545ad0a92b6b491ec8, type: 2}
+    second: {fileID: 2100000, guid: 282ebe10349df1247bf8432ce1ec1534, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 2
     materialSearch: 1
     materialLocation: 0

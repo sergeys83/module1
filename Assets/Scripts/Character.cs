@@ -36,6 +36,8 @@ public class Character : MonoBehaviour
     public Character targetCharacter;
     public Damageble enemyAimed;
     private Health _health;
+    
+    private HitEffect _hitEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,7 @@ public class Character : MonoBehaviour
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         animator = GetComponentInChildren<Animator>();
+        _hitEffect = GetComponentInChildren<HitEffect>();
     }
     public bool isDead()
     {
@@ -146,8 +149,10 @@ public class Character : MonoBehaviour
                 
                 transform.rotation = originalRotation= Quaternion.LookRotation(targetCharacter.transform.position);
                 animator.SetTrigger("shoot");
+                _hitEffect.PlayEffect(targetCharacter.transform);
+                
                 state = State.Shoot;
-
+                
                 break;
         }
     }

@@ -9,12 +9,9 @@ using UnityEngine.EventSystems;
 
 public class LevelMenu : Menu
 {
-    public LevelMenu Instance;
     public List<SceneInit> sceneLoader = new List<SceneInit>();
     public MainMenu mainMenu;
-    public string curScene, scene;
-    public SceneLoad _SceneLoad;
-
+  
     // Start is called before the first frame update
     private void Awake()
     {
@@ -22,7 +19,8 @@ public class LevelMenu : Menu
         {
             Debug.Log(item.scene);
             item.btn.onClick.AddListener(()=>
-            {Hide();
+            {
+                Hide();
                 GameObject.Find("Menu").SetActive(false);
                 SceneLoad.sl.LoadLevel(item.scene);
             });
