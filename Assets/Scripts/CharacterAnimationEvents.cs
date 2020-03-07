@@ -20,6 +20,11 @@ public class CharacterAnimationEvents : MonoBehaviour
        
     }
 
+    public void onShoot()
+    {
+        
+    }
+    
     public void ShootEnd()
     {
         character.SetState(Character.State.Idle);
