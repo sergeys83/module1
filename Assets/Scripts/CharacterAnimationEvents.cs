@@ -5,13 +5,16 @@ using UnityEngine;
 public class CharacterAnimationEvents : MonoBehaviour
 {
     Character character;
+    BulletLauncher bL;
+    private EffectMover eMover;
 
     public Damageble enemy;
     // Start is called before the first frame update
     void Start()
     {
         character = GetComponentInParent<Character>();
-        
+        bL = GetComponentInChildren<BulletLauncher>();
+      
     }
 
     public void AttackEnd()
@@ -22,13 +25,15 @@ public class CharacterAnimationEvents : MonoBehaviour
 
     public void onShoot()
     {
-        
+        bL.vfxCreator();
+        bL.GunRotator(character.transform, character.targetCharacter.transform);
+       
     }
     
     public void ShootEnd()
     {
         character.SetState(Character.State.Idle);
-      
+        bL.transform.rotation =  bL.GetOrigRotation();
     }
 
     public void FistAttackEnd()
@@ -42,6 +47,7 @@ public class CharacterAnimationEvents : MonoBehaviour
     {
         enemy = character.enemyAimed;
         enemy.GetDamage();
+        
     }
     
     // Update is called once per frame

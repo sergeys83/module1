@@ -149,11 +149,8 @@ public class Character : MonoBehaviour
                 
                 transform.rotation = originalRotation= Quaternion.LookRotation(targetCharacter.transform.position);
                 animator.SetTrigger("shoot");
-                if (_hitEffect.PlayEffect(targetCharacter.transform))
-                {
-                    state = State.Shoot;
-                }
-
+                state = State.Shoot;
+            
                 break;
         }
     }
