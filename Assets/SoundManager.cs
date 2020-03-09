@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    public static SoundManager SM;
    
+    public AudioSource[] audioSource;
     
     protected override void Awake()
     { 
-        SM = this;
+      //  SM = this;
         
-        DontDestroyOnLoad(SM.gameObject);
-    }
-    // called before the first frame update
-    void Start()
-    {
-        
+        DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Play(AudioClip clip, Vector3 position)
     {
-        
+        AudioSource freeAudiosource = FindFreeaudioSource();
+        freeAudiosource.transform.position = position;
+        freeAudiosource.clip = clip;
+        freeAudiosource.Play();
+    }
+
+  public AudioSource FindFreeaudioSource()
+    {
+        foreach (AudioSource item in audioSource)
+        {
+            if (!item.isPlaying)
+            {
+                return item;
+            }       
+        }
+        return null;
     }
 }

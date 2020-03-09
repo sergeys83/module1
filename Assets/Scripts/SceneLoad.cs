@@ -6,16 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoad : Singleton<SceneLoad>
 {
-    public static SceneLoad sl;
+   
     private Scene currentScene;
     public GameObject menu;
     
     // Start is called before the first frame update
     protected override void Awake()
     { 
-        sl = this;
-        
-        DontDestroyOnLoad(sl);
+      DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()

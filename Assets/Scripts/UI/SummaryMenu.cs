@@ -37,8 +37,6 @@ public class SummaryMenu : Menu
     {
         Time.timeScale = 1;
         
-        //СДЕЛАТЬ КОРУТИНУ СЦЕНЛОАДЕР В ГЛАВНОМ ММЕНЮ
-        
         currentScene = SceneManager.GetActiveScene();
         SceneManager.UnloadSceneAsync(currentScene.buildIndex);
         SceneManager.LoadScene(currentScene.name,LoadSceneMode.Additive);
@@ -47,12 +45,12 @@ public class SummaryMenu : Menu
     public void NextLevel()
     {
         Hide();
-        SceneLoad.sl.LoadLevel(nextLvl);
+        SceneLoad.Instance.LoadLevel(nextLvl);
     }
     public void LoadMainMenu()
     {
         Hide();
-        SceneLoad.sl.UnLoadLevel(currentScene.name);
+        SceneLoad.Instance.UnLoadLevel(currentScene.name);
     }
  
    public void SetResult(bool winner)

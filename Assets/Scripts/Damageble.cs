@@ -24,14 +24,20 @@ public class Damageble : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         _health = GetComponent<Health>();
 
-        _health.ApplyDamage(2f);
-        
-        if (_health.current<=0)
+        HitSound hitSound = GetComponent<HitSound>();
+
+        if (_health != null)
         {
-            Debug.Log($"{character.gameObject.name} is killed");
-           isDead = true;
-            character.SetState(Character.State.Dead);
-            animator.SetBool("health", true);
+            _health.ApplyDamage(2f);
+            hitSound.Play();
+
+            if (_health.current <= 0)
+            {
+                Debug.Log($"{character.gameObject.name} is killed");
+                isDead = true;
+                character.SetState(Character.State.Dead);
+                animator.SetBool("health", true);
+            }
         }
          
     }

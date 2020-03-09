@@ -22,7 +22,7 @@ public class LevelMenu : Menu
             {
                 Hide();
                 GameObject.Find("Menu").SetActive(false);
-                SceneLoad.sl.LoadLevel(item.scene);
+                SceneLoad.Instance.LoadLevel(item.scene);
             });
         }
     }

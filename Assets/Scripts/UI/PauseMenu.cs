@@ -28,13 +28,13 @@ public class PauseMenu : Menu
         Time.timeScale = 1;
        
         currentScene = SceneManager.GetActiveScene();
-        SceneLoad.sl.LoadLevel(currentScene.name);
+        SceneLoad.Instance.LoadLevel(currentScene.name);
     }
 
     public void LoadMainMenu()
     {
         Hide();
-        SceneLoad.sl.UnLoadLevel(currentScene.name);
+        SceneLoad.Instance.UnLoadLevel(currentScene.name);
        
     }
 

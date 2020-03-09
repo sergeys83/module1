@@ -57,22 +57,29 @@ public class Character : MonoBehaviour
         return state == State.Idle;
     }
     [ContextMenu("Attack")]
-    public void GetDamage()
+   /* public void GetDamage()
     {
        
         _health = targetCharacter.GetComponent<Health>();
 
-        _health.ApplyDamage(2f);
+        HitSound hitSound = GetComponent<HitSound>();
 
-        if (_health.current <= 0)
+        if (_health!=null)
         {
-            Debug.Log($"{targetCharacter.gameObject.name} is killed");
-           // isDead = true;
-            targetCharacter.SetState(State.Dead);
-            animator.SetBool("health", isDead());
+            _health.ApplyDamage(2f);
+            hitSound.Play();
+            if (_health.current <= 0)
+            {
+                Debug.Log($"{targetCharacter.gameObject.name} is killed");
+                // isDead = true;
+                targetCharacter.SetState(State.Dead);
+                animator.SetBool("health", isDead());
+            }
+
         }
 
-    }
+
+    }*/
     public void AttackEnemy()
     {
         enemyAimed = targetCharacter.gameObject.GetComponent<Damageble>();
