@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,11 @@ public class EffectMover : MonoBehaviour
 {
     public float speed = 0f;
     public Transform target;
-    public System.Action onShootend;
+    public Action onShootend;
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     public bool MoveToTarget(Vector3 targetPosition = default)
@@ -19,7 +20,7 @@ public class EffectMover : MonoBehaviour
         Vector3 distance = targetPosition - transform.position;
         Vector3 direction = distance.normalized;
         transform.rotation = Quaternion.LookRotation(direction);
-
+        
         Vector3 vector = direction * speed * Time.deltaTime;
 
         if (vector.magnitude < distance.magnitude)
@@ -40,8 +41,8 @@ public class EffectMover : MonoBehaviour
         {
             if (MoveToTarget(target.position))
             {
-                Damageble damage = target.GetComponent<Damageble>();
-                damage.GetDamage();
+               // Character aim = transform.GetComponentInParent<Character>(); 
+              //  aim.GetDamage();
                 Destroy(gameObject);
             }
         }

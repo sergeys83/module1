@@ -45,8 +45,8 @@ public class CharacterAnimationEvents : MonoBehaviour
     //Только для "целевых" нанесений урона
     public void onEnemyDamaged()
     {
-        enemy = character.enemyAimed;
-        enemy.GetDamage();
+        
+        character.GetDamage();
         
     }
     
