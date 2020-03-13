@@ -18,54 +18,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.87, z: 0}
---- !u!114 &1483681896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492144366031563839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297e8a071bbd7e5439e0af33ba4b8996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
---- !u!114 &1671716010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492144366031563839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297e8a071bbd7e5439e0af33ba4b8996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
---- !u!114 &1011729451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492144366031563839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297e8a071bbd7e5439e0af33ba4b8996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
 --- !u!114 &1483681894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +30,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
 --- !u!1001 &639716390544888667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101,10 +52,20 @@ PrefabInstance:
       propertyPath: distanceFromEnemy
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -1232437103519906585, guid: 73e1432563d8c1a48839445fb70ed3d9,
+        type: 3}
+      propertyPath: deathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6789299ea9ce460479ee356feb633e6a, type: 3}
+    - target: {fileID: -1232437103519906585, guid: 73e1432563d8c1a48839445fb70ed3d9,
+        type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e5603af51649224db3b505842720b6a, type: 3}
     - target: {fileID: 943988838374171019, guid: 73e1432563d8c1a48839445fb70ed3d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2773673338565152072, guid: 73e1432563d8c1a48839445fb70ed3d9,
         type: 3}
@@ -174,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 9011894903515743632, guid: 73e1432563d8c1a48839445fb70ed3d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e1432563d8c1a48839445fb70ed3d9, type: 3}

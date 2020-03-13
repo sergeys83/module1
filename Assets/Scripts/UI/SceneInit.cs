@@ -12,15 +12,6 @@ public class SceneInit
    public string scene;
    public Button btn;
    
-   public void init()
-    {
-     //   btn.onClick.AddListener(Load);
-              
-    }
-    private void Load()
-    {
-       
-    }
 }
 
 

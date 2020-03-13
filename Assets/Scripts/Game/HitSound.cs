@@ -10,8 +10,9 @@ public class HitSound : MonoBehaviour
    
     public void Play()
     {
-        SoundManager.Instance.Play(clip,transform.position);
-       
+        MessageAttacked msg = new MessageAttacked(transform,clip);
+        EventManager.Instance.SendEvent(EventId.UnitDamage, msg);
+     
     }
 
 }

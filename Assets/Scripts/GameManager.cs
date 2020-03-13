@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class GameManager : MonoBehaviour
    public SummaryMenu summary;
     public bool isWinner=false;
     public bool waitForPlayer=true;
-
+    public Animator attackBtn;
+    public Button animbtn;
+   
     [ContextMenu ("PlayerMove")]
 
    public void PlayerMove()
@@ -63,7 +66,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //  summary = GetComponent<SummaryMenu>();
+        attackBtn = animbtn.GetComponent<Animator>();
         StartCoroutine(GameLoop());
     }
    
@@ -96,6 +99,10 @@ public class GameManager : MonoBehaviour
 
     public bool CheckEndGame()
     {
+        if (attackBtn.GetBool("isWaiting"))
+        {
+            attackBtn.SetBool("isWaiting",false);
+        }
         if (FirstAliveChat(playerCharacters)==null)
         {
             PlayerLost();
@@ -106,6 +113,9 @@ public class GameManager : MonoBehaviour
             PlayerWon();
             return true;
         }
+
+        
+        
         return false;
     }
     IEnumerator GameLoop()
@@ -126,9 +136,12 @@ public class GameManager : MonoBehaviour
 
 
                 waitForPlayer = true;
+                attackBtn.SetBool("isWaiting",true);
                 while (waitForPlayer)
+  
                     yield return null;
-
+                   
+                attackBtn.SetBool("isWaiting",false);
                 currentTarget.GetComponentInChildren<TargetIndicator>(true).gameObject.SetActive(false);
 
                 player.targetCharacter = currentTarget;
@@ -157,13 +170,7 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
-       
-            
-        
+     
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

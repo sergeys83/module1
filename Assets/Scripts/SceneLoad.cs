@@ -16,16 +16,10 @@ public class SceneLoad : Singleton<SceneLoad>
       DontDestroyOnLoad(this.gameObject);
     }
 
-    void Start()
-    {
-       // currentScene = SceneManager.GetActiveScene();
-
-    }
-
     public void LoadLevel(string scene=null)
     {
         currentScene = SceneManager.GetActiveScene();
-     //   string scname = SceneManager.GetSceneAt(0).name;
+        
         if (currentScene.buildIndex!=0)
         {
            UnLoadLevel(currentScene.name,scene);
@@ -42,13 +36,15 @@ public class SceneLoad : Singleton<SceneLoad>
         task.allowSceneActivation=true;
         StartCoroutine(SceneLoader(task,scene));
        
+        SceneChanged msg = new SceneChanged(scene);
+        EventManager.Instance.SendEvent(EventId.Scenechanged,msg);
     }
 
     IEnumerator SceneLoader(AsyncOperation response, string sceneName)
     {
         while (!response.isDone)
         {
-            Debug.Log(response.progress);
+            Debug.Log(response.progress);   //заменить на слайдер
             yield return null;
         }
         Scene curScene = SceneManager.GetSceneByName(sceneName);
@@ -63,19 +59,22 @@ public class SceneLoad : Singleton<SceneLoad>
         AsyncOperation task = SceneManager.UnloadSceneAsync(scene);
         task.allowSceneActivation=true;
         
-        StartCoroutine(SceneUnload(task,scene));
+        StartCoroutine(SceneUnload(task));
         
         Debug.Log("SCENE UnLOADED: " + scene);
-        if (string.IsNullOrEmpty(nextScene))
+        
+        if (string.IsNullOrEmpty(nextScene))  //осталась только сцена с меню
         {
             menu.SetActive(true);
-        
+            
+            SceneChanged msg = new SceneChanged(SceneManager.GetSceneAt(0).name);
+            EventManager.Instance.SendEvent(EventId.Scenechanged,msg);
         }
         
     }
     
    
-    IEnumerator SceneUnload(AsyncOperation response, string sceneName)
+    IEnumerator SceneUnload(AsyncOperation response)
     {
         while (!response.isDone)
         {

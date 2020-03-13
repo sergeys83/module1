@@ -16,6 +16,17 @@
           <e p="Character.cs" t="Include" />
           <e p="CharacterAnimationEvents.cs" t="Include" />
           <e p="Damageble.cs" t="Include" />
+          <e p="Events" t="Include">
+            <e p="EventId.cs" t="Include" />
+            <e p="EventManager.cs" t="Include" />
+            <e p="Message" t="Include">
+              <e p="MessageAttacked.cs" t="Include" />
+              <e p="MessageDeath.cs" t="Include" />
+              <e p="Messages.cs" t="Include" />
+              <e p="SceneChanged.cs" t="Include" />
+            </e>
+            <e p="SoundEventListener.cs" t="Include" />
+          </e>
           <e p="Game" t="Include">
             <e p="HitSound.cs" t="Include" />
             <e p="MoveController.cs" t="Include" />

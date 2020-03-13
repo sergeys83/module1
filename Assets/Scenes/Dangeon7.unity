@@ -455,7 +455,6 @@ GameObject:
   - component: {fileID: 34329352}
   - component: {fileID: 34329351}
   - component: {fileID: 34329349}
-  - component: {fileID: 34329348}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -463,14 +462,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &34329348
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34329347}
-  m_Enabled: 0
 --- !u!124 &34329349
 Behaviour:
   m_ObjectHideFlags: 0
@@ -20039,6 +20030,8 @@ MonoBehaviour:
   summary: {fileID: 1153195144}
   isWinner: 0
   waitForPlayer: 0
+  attackBtn: {fileID: 1710347673}
+  animbtn: {fileID: 1710347670}
 --- !u!4 &569203257
 Transform:
   m_ObjectHideFlags: 0
@@ -31998,7 +31991,6 @@ GameObject:
   - component: {fileID: 914940045}
   - component: {fileID: 914940044}
   - component: {fileID: 914940047}
-  - component: {fileID: 914940046}
   m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
@@ -32062,25 +32054,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914940042}
   m_CullTransparentMesh: 0
---- !u!95 &914940046
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914940042}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f1f7bd8b667bfba4bb11f2d579f5b8f6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &914940047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35394,7 +35367,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1081519112}
   - component: {fileID: 1081519114}
-  - component: {fileID: 1081519113}
   - component: {fileID: 1081519115}
   m_Layer: 0
   m_Name: PlayerCamera
@@ -35417,14 +35389,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 20.422, y: -13.72, z: -0.020000001}
---- !u!81 &1081519113
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081519111}
-  m_Enabled: 0
 --- !u!20 &1081519114
 Camera:
   m_ObjectHideFlags: 0
@@ -36733,6 +36697,8 @@ MonoBehaviour:
   uiBattle: {fileID: 569203255}
   nextLevel: {fileID: 251314317}
   nextLvl: 
+  winClip: {fileID: 8300000, guid: 3a3a611c6336a7647a8c1aa4fe94e042, type: 3}
+  loseClip: {fileID: 8300000, guid: 15a1c53e5c8e3714dbca8b72c86350a7, type: 3}
 --- !u!114 &1153195145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47271,7 +47237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
 --- !u!114 &1421704833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47284,7 +47249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
 --- !u!195 &1421704834
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -47846,7 +47810,6 @@ GameObject:
   - component: {fileID: 1458178271}
   - component: {fileID: 1458178270}
   - component: {fileID: 1458178269}
-  - component: {fileID: 1458178268}
   m_Layer: 5
   m_Name: UICamera
   m_TagString: Untagged
@@ -47854,14 +47817,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &1458178268
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458178267}
-  m_Enabled: 0
 --- !u!124 &1458178269
 Behaviour:
   m_ObjectHideFlags: 0
@@ -56821,6 +56776,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hooligan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993794694277496595, guid: 9f6b6093c8242ac4bb871ec8bf4649c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0000015412227
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993794694277496595, guid: 9f6b6093c8242ac4bb871ec8bf4649c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0024084102
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f6b6093c8242ac4bb871ec8bf4649c5, type: 3}

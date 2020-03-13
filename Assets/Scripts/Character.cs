@@ -31,12 +31,14 @@ public class Character : MonoBehaviour
     public float distanceFromEnemy;
     Vector3 originalPosition;
    public Quaternion originalRotation, enemyLook;
-
+   
     public Animator animator;
     public Character targetCharacter;
     public Damageble enemyAimed;
     private Health _health;
     
+    public AudioClip deathClip;
+    public AudioClip damageClip;
     private HitEffect _hitEffect;
 
     // Start is called before the first frame update
@@ -63,27 +65,29 @@ public class Character : MonoBehaviour
        
         _health = targetCharacter.GetComponent<Health>();
 
-        HitSound hitSound = targetCharacter.GetComponent<HitSound>();
+        HitSound hitSound = GetComponent<HitSound>();
 
         if (_health!=null)
         {
             _health.ApplyDamage(2f);
             hitSound.Play();
+            SoundManager.Instance.Play(damageClip,targetCharacter.transform.position);
             
             if (_health.current <= 0)
             {
                 Debug.Log($"{targetCharacter.gameObject.name} is killed");
+                
+                SoundManager.Instance.Play(deathClip,targetCharacter.transform.position);
                 targetCharacter.SetState(State.Dead);
-                animator.SetBool("health", isDead());
+                targetCharacter.animator.SetBool("isDead", true);
             }
 
         }
 
-
     }
     public void AttackEnemy()
     {
-        enemyAimed = targetCharacter.gameObject.GetComponent<Damageble>();
+        
         if (targetCharacter.isDead()|| targetCharacter == null|| isDead())
         {
             Debug.Log("Deadmen can't attack");
@@ -154,11 +158,14 @@ public class Character : MonoBehaviour
             
                 //поворот к цели при стрельбе
             case State.BeginShoot:
-                
-                transform.rotation = originalRotation= Quaternion.LookRotation(targetCharacter.transform.position);
+                transform.LookAt(targetCharacter.transform);
                 animator.SetTrigger("shoot");
                 state = State.Shoot;
             
+                break;
+            
+            case State.Dead:
+                
                 break;
         }
     }

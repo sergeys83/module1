@@ -13,7 +13,7 @@ public class SoundSliderData
     public Text VolumeText;
     public string MixerName;
     private AudioMixer Mixer;
-
+    
     public void SliderChanged(float volume)
     {
         Mixer.SetFloat(MixerName, volume);
@@ -36,7 +36,7 @@ public class SoundSliderData
 
 public class SoundMenu : Menu
 {
-   // public Button PlayButton;
+    public OptionMenu optionMenu;
   
     public AudioMixer Mixer;
     public SoundSliderData[] SoundSettings;
@@ -46,14 +46,12 @@ public class SoundMenu : Menu
         foreach (SoundSliderData soundSetting in SoundSettings)
             soundSetting.Init(Mixer);
     }
-    
+
     public override void Hide()
     {
         base.Hide();
-        var optionMenu = GameObject.Find("Options").GetComponent<OptionMenu>();
         optionMenu.Show();
-        
     }
-   
+
 }
 

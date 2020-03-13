@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2109271165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527927787516627479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6046788531881408098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527927787516627505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497048310cd25b947872b22b32206d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxPrefub: {fileID: 945102318211067220, guid: ce3e6bc29ffd87b4b985bdd5d2da776f,
+    type: 3}
+  creator: {fileID: 3527927787517056529}
 --- !u!143 &2109271169
 CharacterController:
   m_ObjectHideFlags: 0
@@ -18,22 +45,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.87, z: 0}
---- !u!114 &2109271166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2269517667082013923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297e8a071bbd7e5439e0af33ba4b8996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
 --- !u!114 &3419159983802271954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,50 +63,6 @@ MonoBehaviour:
   speed: 10
   gravity: -1
   MbController: {fileID: 0}
---- !u!114 &1738330624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2269517667082013923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297e8a071bbd7e5439e0af33ba4b8996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
---- !u!114 &2109271165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3527927787516627479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
---- !u!114 &6046788531881408098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3527927787516627505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497048310cd25b947872b22b32206d15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vfxPrefub: {fileID: 945102318211067220, guid: ce3e6bc29ffd87b4b985bdd5d2da776f,
-    type: 3}
-  creator: {fileID: 3527927787517056529}
 --- !u!1001 &3527927787516661073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,10 +728,25 @@ PrefabInstance:
       propertyPath: sliderHP
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -1232437103519906585, guid: 73e1432563d8c1a48839445fb70ed3d9,
+        type: 3}
+      propertyPath: deathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ef38b73935dc02448aea06e44fb827ad, type: 3}
+    - target: {fileID: -1232437103519906585, guid: 73e1432563d8c1a48839445fb70ed3d9,
+        type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 20b377534885f8a4f8ef588309f51620, type: 3}
     - target: {fileID: 3578504414196243, guid: 73e1432563d8c1a48839445fb70ed3d9, type: 3}
       propertyPath: current
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 671357282166740642, guid: 73e1432563d8c1a48839445fb70ed3d9,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ae63fc2598dac794f8afa2b355992339, type: 3}
     - target: {fileID: 943988838374171019, guid: 73e1432563d8c1a48839445fb70ed3d9,
         type: 3}
       propertyPath: m_LocalRotation.y

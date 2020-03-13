@@ -20,7 +20,7 @@ public class OptionMenu : Menu
         BackButtonHandler(Hide);
     }
 
-   private void ShowSoundMenu()
+   public void ShowSoundMenu()
    {
         soundMenu.Show();
         base.Hide();

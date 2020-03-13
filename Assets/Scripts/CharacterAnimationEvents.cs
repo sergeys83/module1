@@ -8,8 +8,7 @@ public class CharacterAnimationEvents : MonoBehaviour
     BulletLauncher bL;
     private EffectMover eMover;
 
-    public Damageble enemy;
-    // Start is called before the first frame update
+   // Start is called before the first frame update
     void Start()
     {
         character = GetComponentInParent<Character>();

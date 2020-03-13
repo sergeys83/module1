@@ -16,6 +16,7 @@ public class SummaryMenu : Menu
     public UIBattle uiBattle;
     public Button nextLevel;
     public string nextLvl;
+    public AudioClip winClip, loseClip;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +63,7 @@ public class SummaryMenu : Menu
         {
             winStr.text = winString;
             winImage.gameObject.SetActive(true);
+            SoundManager.Instance.Play(winClip,transform.position);
         }
         else
         {
@@ -69,6 +71,7 @@ public class SummaryMenu : Menu
             winStr.text = loseString;
             winStr.color = Color.red;
             winImage.gameObject.SetActive(false);
+            SoundManager.Instance.Play(loseClip,transform.position);
         }
     }
     

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
 --- !u!143 &1592816646
 CharacterController:
   m_ObjectHideFlags: 0
@@ -31,54 +30,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.87, z: 0}
---- !u!114 &302191113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8465694929531148978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297e8a071bbd7e5439e0af33ba4b8996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
---- !u!114 &1592816641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8465694929531148978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297e8a071bbd7e5439e0af33ba4b8996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
---- !u!114 &131496337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8465694929531148978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297e8a071bbd7e5439e0af33ba4b8996, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  character: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
 --- !u!1001 &1902203076000523734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100,7 +51,22 @@ PrefabInstance:
         type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 4022456353400964299}
+      objectReference: {fileID: 0}
+    - target: {fileID: -1232437103519906585, guid: 73e1432563d8c1a48839445fb70ed3d9,
+        type: 3}
+      propertyPath: deathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e6c5c4add637db46b23219048b77bec, type: 3}
+    - target: {fileID: -1232437103519906585, guid: 73e1432563d8c1a48839445fb70ed3d9,
+        type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e5603af51649224db3b505842720b6a, type: 3}
+    - target: {fileID: 671357282166740642, guid: 73e1432563d8c1a48839445fb70ed3d9,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 65e955753ec98f048a8edac491403be9, type: 3}
     - target: {fileID: 943988838374171019, guid: 73e1432563d8c1a48839445fb70ed3d9,
         type: 3}
       propertyPath: m_RootOrder
@@ -963,12 +929,6 @@ PrefabInstance:
 --- !u!1 &4022456353391589101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100166, guid: f88c8301226fd194cbbc64e25b20d567,
-    type: 3}
-  m_PrefabInstance: {fileID: 4022456353391554987}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &4022456353400964299 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9500000, guid: f88c8301226fd194cbbc64e25b20d567,
     type: 3}
   m_PrefabInstance: {fileID: 4022456353391554987}
   m_PrefabAsset: {fileID: 0}
