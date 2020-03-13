@@ -10,5 +10,4 @@ public class Messages
     public int Damage;
     public string scene;
 
-
 }

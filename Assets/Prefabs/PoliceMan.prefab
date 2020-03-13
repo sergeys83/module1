@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &2109271165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3527927787516627479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6046788531881408098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3527927787516627505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497048310cd25b947872b22b32206d15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vfxPrefub: {fileID: 945102318211067220, guid: ce3e6bc29ffd87b4b985bdd5d2da776f,
-    type: 3}
-  creator: {fileID: 3527927787517056529}
 --- !u!143 &2109271169
 CharacterController:
   m_ObjectHideFlags: 0
@@ -63,6 +36,49 @@ MonoBehaviour:
   speed: 10
   gravity: -1
   MbController: {fileID: 0}
+--- !u!114 &3742818805228073931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269517667082013923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61370a9d2e75df843bac3dd80bc1237b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _helth: 0
+  damage: 0
+  deff: 0
+  data: {fileID: 11400000, guid: efeee5460703ade45bc2628097870236, type: 2}
+--- !u!114 &2109271165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527927787516627479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f8d403a321d174697036491ffdc182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6046788531881408098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527927787516627505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497048310cd25b947872b22b32206d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxPrefub: {fileID: 945102318211067220, guid: ce3e6bc29ffd87b4b985bdd5d2da776f,
+    type: 3}
+  creator: {fileID: 3527927787517056529}
 --- !u!1001 &3527927787516661073
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -46,6 +46,10 @@
             <e p="HitEffect.cs" t="Include" />
           </e>
           <e p="SceneLoad.cs" t="Include" />
+          <e p="ScriptableObjects" t="Include">
+            <e p="CharacterSo.cs" t="Include" />
+            <e p="NPC.cs" t="Include" />
+          </e>
           <e p="SoundManager.cs" t="Include" />
           <e p="TargetIndicator.cs" t="Include" />
           <e p="Tools" t="Include">
