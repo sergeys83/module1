@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletLauncher : MonoBehaviour
 {
     private GameObject vfxGo;
-    public GameObject vfxPrefub;
+  //  public GameObject vfxPrefub;
     public Transform creator;
     private Quaternion origRotation;
 
@@ -18,7 +18,8 @@ public class BulletLauncher : MonoBehaviour
 
     public void vfxCreator()
     {
-        vfxGo = Instantiate(vfxPrefub, creator.position, Quaternion.identity, creator);
+        vfxGo = PoolManager.Instance.RequestBullet(creator);
+       // vfxGo = Instantiate(vfxPrefub, creator.position, Quaternion.identity, creator);
         vfxGo.transform.localRotation = transform.rotation;
     }
     public void GunRotator(Transform owner, Transform target)

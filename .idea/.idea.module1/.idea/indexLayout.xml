@@ -23,6 +23,7 @@
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>obj</Path>
+      <Path>И</Path>
     </explicitExcludes>
   </component>
 </project>

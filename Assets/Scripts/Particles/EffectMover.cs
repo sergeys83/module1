@@ -41,9 +41,9 @@ public class EffectMover : MonoBehaviour
         {
             if (MoveToTarget(target.position))
             {
-               // Character aim = transform.GetComponentInParent<Character>(); 
-              //  aim.GetDamage();
-                Destroy(gameObject);
+                this.gameObject.SetActive(false);
+              
+               // Destroy(gameObject);
             }
         }
         
