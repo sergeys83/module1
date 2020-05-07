@@ -58,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CharacterAnimationEvents.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
+            <state relative-caret-position="416">
               <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <marker date="1583877976143" expanded="true" signature="6:78" ph="..." />
@@ -78,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Tools/PoolManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="208">
               <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
               <folding>
                 <marker date="1584916996037" expanded="true" signature="6:117" ph="..." />
@@ -95,38 +95,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/TresureSpawner.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="256">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding>
-                <marker date="1585261519715" expanded="true" signature="6:78" ph="..." />
-                <marker date="1585261519715" expanded="true" signature="123:729" ph="{...}" />
-                <marker date="1585261519715" expanded="true" signature="322:384" ph="{...}" />
-                <marker date="1585261519715" expanded="true" signature="451:727" ph="{...}" />
-                <marker date="1585261519715" expanded="true" signature="599:721" ph="{...}" />
+                <marker date="1588842582725" expanded="true" signature="6:78" ph="..." />
+                <marker date="1588842582725" expanded="true" signature="123:789" ph="{...}" />
+                <marker date="1588842582725" expanded="true" signature="380:442" ph="{...}" />
+                <marker date="1588842582725" expanded="true" signature="509:787" ph="{...}" />
+                <marker date="1588842582725" expanded="true" signature="623:781" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Tresuare.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="480">
+              <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
               <folding>
-                <marker date="1585171273763" expanded="true" signature="6:92" ph="..." />
-                <marker date="1585171273763" expanded="true" signature="131:1288" ph="{...}" />
-                <marker date="1585171273763" expanded="true" signature="296:438" ph="{...}" />
-                <marker date="1585171273763" expanded="true" signature="486:641" ph="{...}" />
-                <marker date="1585171273763" expanded="true" signature="515:607" ph="{...}" />
-                <marker date="1585171273763" expanded="true" signature="697:946" ph="{...}" />
-                <marker date="1585171273763" expanded="true" signature="766:940" ph="{...}" />
-                <marker date="1585171273763" expanded="true" signature="995:1209" ph="{...}" />
-                <marker date="1585171273763" expanded="true" signature="1034:1203" ph="{...}" />
-                <marker date="1585171273763" expanded="true" signature="1267:1286" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="6:92" ph="..." />
+                <marker date="1588842894745" expanded="true" signature="131:1437" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="328:517" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="565:720" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="594:686" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="776:1025" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="845:1019" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="1074:1358" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="1113:1352" ph="{...}" />
+                <marker date="1588842894745" expanded="true" signature="1416:1435" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -135,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Particles/EffectMover.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="352">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <marker date="1584914802209" expanded="true" signature="6:92" ph="..." />
@@ -245,12 +245,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Particles/EffectMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Particles/BulletLauncher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/PoolManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tresuare.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/TresureSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tresuare.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="width" value="1612" />
     <option name="height" value="907" />
   </component>
@@ -259,11 +259,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
@@ -332,11 +332,12 @@
       <workItem from="1584913483872" duration="4206000" />
       <workItem from="1585065669629" duration="2809000" />
       <workItem from="1585151572440" duration="10384000" />
+      <workItem from="1588841743500" duration="1286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175481000" />
+    <option name="totallyTimeSpent" value="176767000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -348,9 +349,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1612" height="907" extended-state="0" />
+    <frame x="0" y="0" width="1612" height="907" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1507732" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15270619" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -945,6 +947,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2EFDC780-086B-47F2-8399-FD0CE7A4BFA4/4f/dab7a29e/DeviceOrientation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <marker date="1585255982483" expanded="true" signature="0:344" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1585255982483" expanded="true" signature="367:1679" ph="{...}" />
+            <marker date="1585255982483" expanded="true" signature="372:493" ph="///   &lt;para&gt;Describes physical orientation of the device as determined by the OS.&lt;/para&gt; ... " />
+            <marker date="1585255982483" expanded="true" signature="525:1677" ph="{...}" />
+            <marker date="1585255982483" expanded="true" signature="534:641" ph="///   &lt;para&gt;The orientation of the device cannot be determined.&lt;/para&gt; ... " />
+            <marker date="1585255982483" expanded="true" signature="659:810" ph="///   &lt;para&gt;The device is in portrait mode, with the device held upright and the home button at the bottom.&lt;/para ... " />
+            <marker date="1585255982483" expanded="true" signature="829:993" ph="///   &lt;para&gt;The device is in portrait mode but upside down, with the device held upright and the home button at t ... " />
+            <marker date="1585255982483" expanded="true" signature="1022:1178" ph="///   &lt;para&gt;The device is in landscape mode, with the device held upright and the home button on the right side.&lt; ... " />
+            <marker date="1585255982483" expanded="true" signature="1202:1357" ph="///   &lt;para&gt;The device is in landscape mode, with the device held upright and the home button on the left side.&lt;/ ... " />
+            <marker date="1585255982483" expanded="true" signature="1382:1511" ph="///   &lt;para&gt;The device is held parallel to the ground with the screen facing upwards.&lt;/para&gt; ... " />
+            <marker date="1585255982483" expanded="true" signature="1528:1659" ph="///   &lt;para&gt;The device is held parallel to the ground with the screen facing downwards.&lt;/para&gt; ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/8d/5876d0e1/Screen.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="239" column="36" selection-start-line="239" selection-start-column="36" selection-end-line="239" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2EFDC780-086B-47F2-8399-FD0CE7A4BFA4/2d/818d8a16/Input.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="362" column="43" selection-start-line="362" selection-start-column="43" selection-end-line="362" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/HitSound.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -986,7 +1022,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CharacterAnimationEvents.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
+        <state relative-caret-position="416">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <marker date="1583877976143" expanded="true" signature="6:78" ph="..." />
@@ -1004,7 +1040,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Tools/PoolManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="208">
           <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
           <folding>
             <marker date="1584916996037" expanded="true" signature="6:117" ph="..." />
@@ -1022,7 +1058,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Particles/EffectMover.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="352">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <marker date="1584914802209" expanded="true" signature="6:92" ph="..." />
@@ -1037,69 +1073,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Tresuare.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding>
-            <marker date="1585171273763" expanded="true" signature="6:92" ph="..." />
-            <marker date="1585171273763" expanded="true" signature="131:1288" ph="{...}" />
-            <marker date="1585171273763" expanded="true" signature="296:438" ph="{...}" />
-            <marker date="1585171273763" expanded="true" signature="486:641" ph="{...}" />
-            <marker date="1585171273763" expanded="true" signature="515:607" ph="{...}" />
-            <marker date="1585171273763" expanded="true" signature="697:946" ph="{...}" />
-            <marker date="1585171273763" expanded="true" signature="766:940" ph="{...}" />
-            <marker date="1585171273763" expanded="true" signature="995:1209" ph="{...}" />
-            <marker date="1585171273763" expanded="true" signature="1034:1203" ph="{...}" />
-            <marker date="1585171273763" expanded="true" signature="1267:1286" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2EFDC780-086B-47F2-8399-FD0CE7A4BFA4/4f/dab7a29e/DeviceOrientation.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <marker date="1585255982483" expanded="true" signature="0:344" ph="/* Decompiled with JetBrains decompiler ... */" />
-            <marker date="1585255982483" expanded="true" signature="367:1679" ph="{...}" />
-            <marker date="1585255982483" expanded="true" signature="372:493" ph="///   &lt;para&gt;Describes physical orientation of the device as determined by the OS.&lt;/para&gt; ... " />
-            <marker date="1585255982483" expanded="true" signature="525:1677" ph="{...}" />
-            <marker date="1585255982483" expanded="true" signature="534:641" ph="///   &lt;para&gt;The orientation of the device cannot be determined.&lt;/para&gt; ... " />
-            <marker date="1585255982483" expanded="true" signature="659:810" ph="///   &lt;para&gt;The device is in portrait mode, with the device held upright and the home button at the bottom.&lt;/para ... " />
-            <marker date="1585255982483" expanded="true" signature="829:993" ph="///   &lt;para&gt;The device is in portrait mode but upside down, with the device held upright and the home button at t ... " />
-            <marker date="1585255982483" expanded="true" signature="1022:1178" ph="///   &lt;para&gt;The device is in landscape mode, with the device held upright and the home button on the right side.&lt; ... " />
-            <marker date="1585255982483" expanded="true" signature="1202:1357" ph="///   &lt;para&gt;The device is in landscape mode, with the device held upright and the home button on the left side.&lt;/ ... " />
-            <marker date="1585255982483" expanded="true" signature="1382:1511" ph="///   &lt;para&gt;The device is held parallel to the ground with the screen facing upwards.&lt;/para&gt; ... " />
-            <marker date="1585255982483" expanded="true" signature="1528:1659" ph="///   &lt;para&gt;The device is held parallel to the ground with the screen facing downwards.&lt;/para&gt; ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F38C71C8-6AA6-4E29-9D4C-EA9FB7C715E1/8d/5876d0e1/Screen.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="239" column="36" selection-start-line="239" selection-start-column="36" selection-end-line="239" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2EFDC780-086B-47F2-8399-FD0CE7A4BFA4/2d/818d8a16/Input.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="362" column="43" selection-start-line="362" selection-start-column="43" selection-end-line="362" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/TresureSpawner.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="256">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <marker date="1585261519715" expanded="true" signature="6:78" ph="..." />
-            <marker date="1585261519715" expanded="true" signature="123:729" ph="{...}" />
-            <marker date="1585261519715" expanded="true" signature="322:384" ph="{...}" />
-            <marker date="1585261519715" expanded="true" signature="451:727" ph="{...}" />
-            <marker date="1585261519715" expanded="true" signature="599:721" ph="{...}" />
+            <marker date="1588842582725" expanded="true" signature="6:78" ph="..." />
+            <marker date="1588842582725" expanded="true" signature="123:789" ph="{...}" />
+            <marker date="1588842582725" expanded="true" signature="380:442" ph="{...}" />
+            <marker date="1588842582725" expanded="true" signature="509:787" ph="{...}" />
+            <marker date="1588842582725" expanded="true" signature="623:781" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Tresuare.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+          <folding>
+            <marker date="1588842894745" expanded="true" signature="6:92" ph="..." />
+            <marker date="1588842894745" expanded="true" signature="131:1437" ph="{...}" />
+            <marker date="1588842894745" expanded="true" signature="328:517" ph="{...}" />
+            <marker date="1588842894745" expanded="true" signature="565:720" ph="{...}" />
+            <marker date="1588842894745" expanded="true" signature="594:686" ph="{...}" />
+            <marker date="1588842894745" expanded="true" signature="776:1025" ph="{...}" />
+            <marker date="1588842894745" expanded="true" signature="845:1019" ph="{...}" />
+            <marker date="1588842894745" expanded="true" signature="1074:1358" ph="{...}" />
+            <marker date="1588842894745" expanded="true" signature="1113:1352" ph="{...}" />
+            <marker date="1588842894745" expanded="true" signature="1416:1435" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -8,13 +8,15 @@ public class Tresuare : MonoBehaviour
     public bool isGrounded = false;
     public float time = 15f;
     public BoxCollider obj;
+
+    private TresureSpawner ts;
     // Start is called before the first frame update
     void Start()
     { 
         obj = GetComponent<BoxCollider>();
         obj.isTrigger = false;
-       
-        StartCoroutine( DownCounter(time=8f));
+        ts = GetComponentInParent<TresureSpawner>();
+      //  StartCoroutine( DownCounter(time=3f));
     }
 
     public IEnumerator DownCounter(float time)
@@ -44,8 +46,10 @@ public class Tresuare : MonoBehaviour
         {
             obj.isTrigger = false;
             StopAllCoroutines();
-            Destroy(this.gameObject);
+            ts.prefubs.Remove(this);
+            Destroy(obj);
             Debug.Log("Player is coming");
+            StartCoroutine(DownCounter(3f));
         }
     }
 
